@@ -4,7 +4,7 @@ from wtforms.validators import DataRequired, EqualTo
 from flask_wtf import FlaskForm
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'
-# app.config['WTF_CSRF_ENABLED'] = False  # 移除这一行，重新启用CSRF保护
+# app.config['WTF_CSRF_ENABLED'] = True  # 移除这一行，重新启用CSRF保护
 class LoginForm(FlaskForm):
     username = StringField(label='Username', validators=[DataRequired()])
     password = PasswordField(label='Password', validators=[DataRequired()])
